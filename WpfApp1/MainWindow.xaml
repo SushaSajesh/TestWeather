@@ -1,0 +1,68 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtCity" Text="London"/>
+        <Button x:Name="btnSearch" Content="Search" Grid.Column="1" Click="btnSearch_Click"/>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="City"/>
+            <TextBlock Grid.Column="1" Grid.Row="0" x:Name="cityName" Text="test"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Country"/>
+            <TextBlock Grid.Column="1" Grid.Row="1" x:Name="cityCountry"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Region"/>
+            <TextBlock Grid.Column="1" Grid.Row="2" x:Name="cityRegion"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="3" Text="Lat"/>
+            <TextBlock Grid.Column="1" Grid.Row="3" x:Name="cityLat"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="4" Text="Lon"/>
+            <TextBlock Grid.Column="1" Grid.Row="4" x:Name="cityLon"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="5" Text="Temp F"/>
+            <TextBlock Grid.Column="1" Grid.Row="5" x:Name="tempF"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="6" Text="Wind mph"/>
+            <TextBlock Grid.Column="1" Grid.Row="6" x:Name="windmph"/>
+
+            
+            
+            <TextBlock Grid.Column="0" Grid.Row="9" Text="Condition"/>
+            <TextBlock Grid.Column="1" Grid.Row="9" x:Name="tempCond"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="10" Text="Image"/>
+            <Image Grid.Column="1" Grid.Row="10" x:Name="imgWeatherCondition"/>
+        </Grid>
+    </Grid>
+</Window>
