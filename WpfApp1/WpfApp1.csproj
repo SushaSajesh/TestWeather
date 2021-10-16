@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -59,8 +59,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Weatherforcast.data.cs" />
-    <Compile Include="Weatherforcast.proxy.cs" />
+    <Compile Include="Models\ActionCommand.cs" />
+    <Compile Include="Models\NotifyModel.cs" />
+    <Compile Include="Models\WeatherVM.cs" />
+    <Compile Include="Services\IWeatherforcastService.cs" />
+    <Compile Include="Services\Weatherforcast.data.cs" />
+    <Compile Include="Services\Weatherforcast.proxy.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Services;
 
 namespace WpfApp1
 {
@@ -20,36 +21,37 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private WeatherforcastService service = new WeatherforcastService();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        WeatherforcastService service = new WeatherforcastService();
 
-        private async void btnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            var data = await service.GetWeatherData(txtCity.Text);
-            cityName.Text = data.Location.Name;
-            cityCountry.Text = data.Location.Country;
-            cityRegion.Text = data.Location.Region;
-            cityLat.Text = data.Location.Lat.ToString();
-            cityLon.Text = data.Location.Lon.ToString();
+        //private async void btnSearch_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //var data = await service.GetWeatherData(txtCity.Text);
+        //    //cityName.Text = data.Location.Name;
+        //    //cityCountry.Text = data.Location.Country;
+        //    //cityRegion.Text = data.Location.Region;
+        //    //cityLat.Text = data.Location.Lat.ToString();
+        //    //cityLon.Text = data.Location.Lon.ToString();
 
-            tempF.Text = data.Data.TempInF.ToString();
-            windmph.Text = data.Data.WindMPH.ToString();
+        //    //tempF.Text = data.Data.TempInF.ToString();
+        //    //windmph.Text = data.Data.WindMPH.ToString();
 
-            tempCond.Text = data.Data.Condition.Text.ToString();
+        //    //tempCond.Text = data.Data.Condition.Text.ToString();
 
-            //try
-            //{
-            //    BitmapImage bitmap = new BitmapImage();
-            //    bitmap.BeginInit();
-            //    bitmap.UriSource = new Uri(data.Data.Condition.Icon, UriKind.Absolute);
-            //    bitmap.EndInit();
-            //    imgWeatherCondition.Source = bitmap;
-            //}
-            //catch { }
-        }
+        //    //try
+        //    //{
+        //    //    BitmapImage bitmap = new BitmapImage();
+        //    //    bitmap.BeginInit();
+        //    //    bitmap.UriSource = new Uri(data.Data.Condition.Icon, UriKind.Absolute);
+        //    //    bitmap.EndInit();
+        //    //    imgWeatherCondition.Source = bitmap;
+        //    //}
+        //    //catch { }
+        //}
     }
 }
