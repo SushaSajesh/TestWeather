@@ -5,10 +5,11 @@ namespace WpfApp1.Models
 {
     public class ActionCommand : ICommand
     {
+        public string str;
         public delegate void ICommandOnExecute(object parameter);
         public delegate bool ICommandOnCanExecute(object parameter);
 
-        private ICommandOnExecute _execute;
+        private ICommandOnExecute -execute;
         private ICommandOnCanExecute _canExecute;
 
         public ActionCommand(ICommandOnExecute onExecuteMethod, ICommandOnCanExecute onCanExecuteMethod)
